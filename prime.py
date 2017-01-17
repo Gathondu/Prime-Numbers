@@ -1,3 +1,5 @@
+class Prime:
+    pass
 # Take input
 # Confirm that the input is a number
 # Incase of floats, round the float to the nearest 10
