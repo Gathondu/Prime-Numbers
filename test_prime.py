@@ -9,13 +9,9 @@ class PrimeTest(unittest.TestCase):
     def setUp(self):
         self.prime = Prime()
 
-    def test_invalid_input_throws_TypeError(self):
-        with self.assertRaises(TypeError):
-            prime.checkString("string")
-
-    def test_floats_are_rounded_to_nearest_whole_numbers(self):
-        result = prime.roundFloat('5.6')
-        self.assertEqual(result, 6, "Round function returns invalid output")
+    def test_invalid_input_throws_ValueError(self):
+        with self.assertRaises(ValueError):
+            self.prime.checkInvalid("string")
 
     def test_that_input_is_a_number_greater_than_1(self):
         result = prime.getInput(1)
@@ -23,7 +19,7 @@ class PrimeTest(unittest.TestCase):
 
     def test_input_less_than_2_throws_ValueError(self):
         with self.assertRaises(ValueError):
-            prime.get_input(1)
+            prime.getInput(1)
 
     # Test that the function gives correct output with 2 as input
     # Test that the function gives correct output with 3 as input
