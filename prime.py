@@ -15,7 +15,7 @@ class Prime():
                 return 'Input value should be an Integer'
             else:
                 if int(n) > 1:
-                    return int(n)
+                    return int(round(float(n)))
                 else:
                     raise ValueError
         except ValueError:
