@@ -4,8 +4,7 @@ import math
 class Prime():
     def checkInvalid(self, n):
         try:
-            if int(n):
-                raise ValueError
+            int(n)
             return False
         except ValueError:
             return True

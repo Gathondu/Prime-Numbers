@@ -11,7 +11,7 @@ class PrimeTest(unittest.TestCase):
 
     def test_invalid_input(self):
         result = self.prime.primeNumbers("string")
-        assertEqual(result, 'Input value should be an Integer', 'Input allows invalid input')
+        self.assertEqual(result, 'Input value should be an Integer', 'Input allows invalid input')
 
     def test_that_input_should_be_greater_than_1(self):
         result = self.prime.primeNumbers(1)
@@ -23,3 +23,5 @@ class PrimeTest(unittest.TestCase):
     # Test that the function gives correct output with 16 as input
     # Test that the function gives correct output with 37 as input
     # Test that the function gives correct output with 166 as input
+if __name__ == "__main__":
+    unittest.main()
